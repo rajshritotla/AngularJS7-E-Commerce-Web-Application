@@ -1,0 +1,8 @@
+th,td{
+    min-width: 5vw;
+    text-align: center;
+}
+
+#main{
+    width: 75%;
+}

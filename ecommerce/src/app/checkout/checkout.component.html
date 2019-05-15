@@ -1,0 +1,169 @@
+
+<div id="main" class="container p-3 mb-2">
+    <table class="table table-hover table-responsive-sm"> 
+        <thead>
+          <tr class="table-danger">
+            <th scope="col">Sr. No.</th>
+            <th scope="col">Product Name</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Unit Price</th>
+            <th scope="col">Total</th> 
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cart of cartProducts; let index=index">
+            <th scope="row">{{index+1}}</th>
+            <td>{{cart.productName}}</td>
+            <td>{{cart.quantity}}</td>
+            <td>{{cart.rate | currency}}</td>
+            <td>{{cart.quantity * cart.rate}}</td>
+          </tr>
+          <tr class="table-danger">
+            <th scope="col">TOTAL</th>
+            <th scope="col"></th>
+            <th scope="col">{{totalQuantity}}</th>
+            <th scope="col"></th>
+            <th scope="col">{{totalAmount | currency}}</th>
+          </tr>
+        </tbody>
+      </table>
+    
+                 <!-- ...............BILLING ADDRESS.................. -->
+    <div class="col-auto">
+        <h4> Billing Address</h4>
+    </div>
+    <form>
+    <div class="row form-group col-auto">
+      <div class="col">
+          <label>First Name</label>
+          <input type="text" class="form-control" placeholder="First name">
+      </div>
+      <div class="col">
+          <label>Last Name</label>
+          <input type="text" class="form-control" placeholder="Last name">
+      </div>
+    </div>
+    
+    <div class="form-group col-auto">
+      <label>Username</label>
+      <div class="input-group mb-2">
+          <div class="input-group-prepend">
+          <div class="input-group-text">@</div>
+          </div>
+          <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
+      </div>
+    </div>
+    
+    <div class="form-group col-auto">
+      <label>Email</label><label class="text-muted">(Optional)</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+      
+    </div>
+    
+    <div class="form-group col-auto">
+      <label>Address</label>
+      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" #address1>
+    </div>
+    <div class="form-group col-auto">
+      <label>Address 2 </label><label class="text-muted">(Optional)</label>
+      <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" #address2>
+    </div>
+    
+    <div class="form-row col-auto">
+      <div class="form-group col-md-6">
+          <label>City</label>
+          <input type="text" class="form-control" id="city" #city>
+      </div>
+      <div class="form-group col-md-4">
+          <label>State</label>
+          <input type="text" class="form-control" id="state" #state>
+      </div>
+      <div class="form-group col-md-2">
+          <label>Zip</label>
+          <input type="text" class="form-control" id="inputZip" #zipcode>
+      </div>
+    </div>
+    
+    <div class="form-group col-auto">
+      <hr>
+    </div>
+    
+    <div class="form-group col-auto">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label">
+                Shipping address is same as my billing address
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+            <label class="form-check-label">
+                Save this information for next time
+            </label>
+        </div>
+    </div>
+    
+    
+    <div class="form-group col-auto">
+          <hr>
+    </div>
+        
+    <!-- ...............PAYMENT.................. -->
+    <div class="col-auto">
+          <h4>Payment</h4>
+    </div>
+    
+    <div class="form-group col-auto form-check">
+    
+        <div class="custom-control custom-radio">
+            <input type="radio" class="custom-control-input" id="defaultChecked" name="defaultExampleRadios" checked>
+            <label class="custom-control-label">Credit Card</label>
+        </div>
+    
+        <div class="custom-control custom-radio">
+            <input type="radio" class="custom-control-input" id="defaultUnchecked1" name="defaultExampleRadios">
+            <label class="custom-control-label">Debit Card</label>
+        </div>
+    
+        <div class="custom-control custom-radio">
+            <input type="radio" class="custom-control-input" id="defaultUnchecked" name="defaultExampleRadios">
+            <label class="custom-control-label">Cash On Delivery</label>
+        </div>
+    
+    </div>
+    
+    <div class="row form-group col-auto">
+        <div class="col">
+            <label>Name on card</label>
+            <input type="text" class="form-control">
+            <small id="emailHelp" class="form-text text-muted">Full name as displayed on the card</small>
+        </div>
+        <div class="col">
+            <label>Credit card number</label>
+            <input type="text" class="form-control">
+        </div>
+    </div>
+    
+    <div class="row form-group col-auto">
+        <div class="col-md-2">
+            <label>Expiration</label>
+            <input type="text" class="form-control">
+        </div>
+        <div class="col-md-2">
+            <label>CVV</label>
+            <input type="text" class="form-control">
+        </div>
+    </div>
+    
+    <div class="form-group col-auto">
+        <hr>
+    </div>
+    <div class="form-group col-auto"> 
+        <button (click)="finalPay(address1.value, address2.value, city.value, state.value, zipcode.value)" type="button" class="btn btn-primary btn-lg btn-block ml-auto p-2 " style="width: fit-content">Submit</button>
+    </div>
+    </form>
+    
+    
+    
+    
+</div>

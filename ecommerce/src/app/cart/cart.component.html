@@ -1,0 +1,40 @@
+<table class="table table-hover table-responsive-sm"> 
+  <thead>
+    <tr class="table-info">
+      <th scope="col">Sr. No.</th>
+      <th scope="col">Product Name</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Unit Price</th>
+      <th scope="col">Total</th> 
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr *ngFor="let cart of cartProducts; let index=index">
+      <th scope="row">{{index+1}}</th>
+      <td>{{cart.productName}}</td>
+      <td>
+        
+            <button type="button" class="btn btn-success btn-sm changeQuantityButton" (click)="increaseQuantity(index)"> + </button>
+            {{cart.quantity}}
+            <button type="button" class="btn btn-danger btn-sm changeQuantityButton" (click)="decreaseQuantity(index)"> - </button>
+     
+      </td>
+      <td>{{cart.rate | currency}}</td>
+      <td>{{cart.quantity * cart.rate}}</td>
+    </tr>
+    <tr class="table-info">
+      <th scope="col">TOTAL</th>
+      <th scope="col"></th>
+      <th scope="col">{{totalQuantity}}</th>
+      <th scope="col"></th>
+      <th scope="col">{{totalAmount | currency}}</th>
+    </tr>
+    <tr >
+        
+    </tr>
+  </tbody>
+</table>
+<div class="d-flex justify-content-center" >
+    <button type="button" class="btn btn-success" [routerLink]="['../checkout']">Checkout</button>
+</div>

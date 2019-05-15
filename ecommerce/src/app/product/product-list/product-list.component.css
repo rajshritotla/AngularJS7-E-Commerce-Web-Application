@@ -1,0 +1,23 @@
+@media screen and (max-width: 479px) {
+    /* start of phone styles */
+    .cardSize{
+        width: 40vw;
+        height: 45vh;
+        width: max-content;
+
+    }
+}
+
+.cardSize{
+    margin-left: 5vw;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    width: 20vw;
+    
+}
+
+.cardImage{
+    height: 15vw;
+    width: 15vw;
+}
+

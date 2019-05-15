@@ -1,0 +1,66 @@
+<div class="card border-dark mb-3 text-center edit-main-card"  *ngIf="product">
+  <div class="card-header bg-transparent border-dark ">
+      <div class="row row-in-mobile">
+          <div class="col-6 col-in-mobile">
+              <img src="../../../assets/images/{{product.pid}}.jpeg" class="card-img-top img-fluid card-image img-responsive" alt="loading..">
+          </div>
+          <div class="col d-flex flex-column align-self-center col-in-mobile">
+              <div class="row justify-content-around">
+                  <button type="button" class="btn btn-success edit-button">{{product.rate | currency}}</button>
+              </div>
+              <div class="row justify-content-around">
+                  <button type="button" class="btn btn-dark edit-button" [routerLink]="['../../cart', product.pid]">Add To Cart</button>
+              </div>
+              <div class="row justify-content-around">
+                  <button type="button" class="btn btn-light edit-button for-mobile">Back To Products</button>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+  <div class="card-body text-center text-success">
+    <h5 class="card-title text-white bg-danger product-name">
+      {{product.name | uppercase}}
+    </h5>
+  </div>
+  
+  <div class="card-footer bg-transparent border-dark text-center">
+      <p class="card-text bg-info text-white product-detail">{{product.detail}}</p>
+  </div>
+</div>
+<!--
+  <div class="card border-dark mb-3 text-center edit-card"  *ngIf="product">
+  <div class="card-header bg-transparent border-dark ">
+    
+    <img src="../../../assets/images/{{product.pid}}.jpeg" class="card-img-top card-image" alt="loading..">
+  </div>
+  
+  <div class="card-body text-center text-success">
+    <h5 class="card-title text-white bg-danger product-name">
+      {{product.name | uppercase}}
+    </h5>
+    <p class="card-text bg-info text-white product-detail">{{product.detail}}</p>
+  </div>
+  <div class="card-footer bg-transparent border-dark text-center">
+      <div class="row">
+          <div class="col text-right">
+              <button type="button" class="btn btn-success min-button-width">{{product.rate | currency}}</button>
+          </div>
+          <div class="col text-left">
+              <button type="button" class="btn btn-dark min-button-width" [routerLink]="['../../cart', product.pid]">Add To Cart</button>
+          </div>
+      </div>
+  </div>
+</div>
+-->
+  <!--
+    <div *ngIf="product">
+    <p>
+        product-detail works!
+      
+        {{product.pid}}
+        {{product.name}}
+        
+      </p>
+</div>
+  -->

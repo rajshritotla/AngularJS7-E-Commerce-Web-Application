@@ -1,0 +1,57 @@
+@media screen and (max-width: 479px) {
+    /* start of phone styles */
+    /* It's possible to hide the image if the screen becomes too small */
+    .img-responsive {
+        height: 70vw;
+        width: 50vw;
+        
+    }
+
+    .col-in-mobile{
+        width: 100vw;
+    }
+
+    .row-in-mobile{
+        justify-content: center;
+    }
+
+    .for-mobile{
+       
+        visibility: visible;
+    }
+}
+
+.for-mobile{
+    visibility: hidden;
+} 
+
+.card-image{
+    height: 15vw;
+    width: 15vw;
+}
+
+.edit-main-card{
+    margin-top: 2vh;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    border-width: medium;
+}
+
+.product-name{
+    padding:1%; 
+    align-self: center;
+    margin-bottom: 0.2vh;
+}
+
+.product-detail{
+    padding: 1%;
+}
+
+.edit-button{
+    min-width: 10vw;
+    margin: 2vh;
+}
+
+.card-body{
+    padding: 0.5%;
+}

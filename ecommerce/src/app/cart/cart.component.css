@@ -1,0 +1,10 @@
+.changeQuantityButton{
+    width:auto;
+}
+
+
+th,td{
+    min-width: 5vw;
+    text-align: center;
+}
+

@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="card-deck " *ngFor="let product of products">
+            <div class="card cardSize  d-flex align-items-center" >
+                    <img src="../../../assets/images/{{product.pid}}.jpeg" class="card-img-top cardImage " alt="loading..">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><a [routerLink]="['../product', product.pid]">{{product.name}}</a></h5>
+                        <h5 class="card-title">{{product.rate | currency}}</h5>
+                        <a class="btn btn-primary"  [routerLink]="['../cart', product.pid]">Add To Cart</a>
+                    </div>
+            </div>
+    </div>
+</div>
+<!--
+col-sm-3
+<div class="col-sm-6">
+        <router-outlet></router-outlet>
+</div>
+-->

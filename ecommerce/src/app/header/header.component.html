@@ -1,0 +1,38 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">WindowSTOP</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#" routerLink='/products'>Product <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+   
+      
+    <div class=" dropdown row show"  (mouseout)="cleardiv()">
+          <input class="form-control  dropdown-toggle" type="text" placeholder="Search" [(ngModel)]='inputvalue' id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+         
+          <div  *ngFor="let product of (inputvalue | searchproduct)" class="dropdown-menu show mydrop" id="clear" aria-labelledby="dropdownMenuLink">
+          
+              <a class=" show dropdown-item" [routerLink]="['../product', product.pid]"> {{ product.name }} </a>
+          
+          </div>
+      </div>
+     
+      <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="#" [routerLink]="['cart']">Cart <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">MyAccount <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </div>
+  </nav>

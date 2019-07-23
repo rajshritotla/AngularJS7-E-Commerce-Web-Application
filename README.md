@@ -12,7 +12,7 @@ USPS API
 
 Browser's local storage
 
-# Command to implement
+# Commands to implement
 
 # To Create
 ```

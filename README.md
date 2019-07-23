@@ -14,35 +14,35 @@ Browser's local storage
 
 # Command to implement
 
-# TO CREATE
+# To Create
 ```
 ng new ecommerce
 cd ecommerce
 ```
 
-# RUN
+# Run
 ```
 ng serve --open
 ```
 
-# NODE INSTALL
+# Node Installation
 ```
 npm install --save
 npm install typescript
 ```
 
-# FOR BOOTSTRAP
+# Bootstrap Installation
 ```
 npm install bootstrap ngx-bootstrap --save
 index.html -> insert <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 ```
 
-# FOR HEADER FOOTER | Component genration
+# For Header Footer | Component generation
 ```
 ng generate component <name> [options]
 ```
 
-# SERVICE (class)
+# Service (class)
 ```
 ng g service <myserviceNAME>
 ```
@@ -59,7 +59,7 @@ ng g service model/productService/product  {USE THIS NOT ABOVE}
 
 3. Start writing service actionnn code :P <product.service.ts>
 
-# FOR ROUTING
+# For Routing
 edit routing ts file
 ```
 add like href ->>>> 
@@ -73,12 +73,12 @@ after setting routes, start creating view for every route in COMPONENT
 add PROVIDERS in ts file of each COMPONENT
 ```
 
-# PIPE
+# Pipe
 ```
 ng generate pipe
 ```
 
-# COMPONENTS
+# Components
 ```
 ng generate component product/product-list
 ng generate component product/product-detail
@@ -97,7 +97,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 imports: [.. , Ng2SearchPipeModule],
 ```
 
-# For pipe implemnattation
+# For pipe implementation
 in TS file -> 
 ``` 
 import { SearchproductPipe } from 'src/app/filters/searchproduct.pipe';

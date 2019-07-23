@@ -2,6 +2,10 @@
 
 Build efficient and reusable front-end mobile first general design for e-commerce businesses
 
+```
+OUTPUT folder contains a few view and feature of the project, to give an idea how about project's UI, UX and working
+```
+
 # Technologies/Features Used
 
 AngularJS7

@@ -4,6 +4,7 @@ Build efficient and reusable front-end mobile first general design for e-commerc
 
 ```
 "OUTPUT" directory contains a few images, to give an idea how about project's UI, UX, features and working.
+
 Click "Download" to view whole image.
 ```
 

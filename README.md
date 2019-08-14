@@ -8,7 +8,7 @@ Build efficient and reusable front-end mobile first general design for e-commerc
 ###### Click "Download" to view whole image.
 
 
-# Technologies/Features Used
+# Technologies Used
 
 AngularJS7
 
